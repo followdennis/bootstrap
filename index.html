@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/bootstrap4/dist/css/bootstrap.css">
+    <style>
+      .check_active{
+        background-color:red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="table-responsive-sm">
+        <table class="table table-striped table-hover table-bordered table-sm">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+              <th scope="col">name</th>
+              <th scope="col">name</th>
+              <th scope="col">name</th>
+              <th scope="col">name</th>
+              <th scope="col">name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+              <td>@fat</td>
+              <td>@fat</td>
+              <td>@fat</td>
+              <td>@fat</td>
+              <td>@fat</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+          <div class="col-md-2">选中效果</div>
+          <div class=col-md-10>
+           
+           <span>
+            <label for="m1">
+            <input type="radio" name="match" value="1" id="m1" style="display:none">胜
+            </label>
+           </span>
+           
+            <span>
+              <label for="m2">
+              <input type="radio" name="match" value="2" id="m2" style="display:none">平
+            </label>
+            </span>
+            
+            <span>
+              <label for="m3">
+              <input type="radio" name="match" value="3" id="m3" style="display:none">负
+             </label>
+            </span>
+            
+            
+          </div>
+      </div>
+    </div>    
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/bootstrap4/dist/js/bootstrap.js"></script>
+    <script>
+      $('input[type="radio"]').click(function(){
+        if($(this).is(":checked")){
+          $(this).closest('span').addClass('check_active');
+          $(this).closest('span').siblings('span').removeClass('check_active');
+        }
+        alert($(this).val());
+      })
+    </script>
+  </body>
+</html>
