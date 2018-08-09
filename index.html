@@ -83,6 +83,26 @@
             
           </div>
       </div>
+      <div class="row">
+        <table>
+          <tr>
+            <td><input type="checkbox" name="check[]" onclick="select_all(this)"> 全选</td>
+            <td>行行行行</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="check[]"></td>
+            <td>行行行行</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="check[]"></td>
+            <td>行行行行</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="check[]"></td>
+            <td>航航</td>
+          </tr>
+        </table>
+      </div>
     </div>    
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="../js/jquery-3.1.1.min.js"></script>
@@ -96,6 +116,15 @@
         }
       
       })
+    </script>
+    <script>
+        function select_all(obj){
+            if($(obj).is(":checked")){
+              $("input[type='checkbox']").prop('checked',true);
+            }else{
+              $("input[type='checkbox']").prop('checked',false);
+            }
+        }
     </script>
   </body>
 </html>
