@@ -119,12 +119,23 @@
     </script>
     <script>
         function select_all(obj){
-            if($(obj).is(":checked")){
+            if($(obj).is(":checked") == true){
               $("input[type='checkbox']").prop('checked',true);
             }else{
               $("input[type='checkbox']").prop('checked',false);
             }
         }
     </script>
+	<script>
+		//点击某行，选中复选框
+		$('table tr').click(function(){
+			var input = $(this).find("input[type=checkbox]");
+			if(input.prop('checked')){
+				input.prop('checked',false);
+			}else{
+				input.prop('checked',true);
+			}
+		})
+	</script>
   </body>
 </html>
