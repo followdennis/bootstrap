@@ -102,7 +102,48 @@
             <td>航航</td>
           </tr>
         </table>
+      
       </div>
+
+
+
+    <div class="row align-items-start">
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+    <div class="row align-items-end">
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+
+
+
+
     </div>    
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="../js/jquery-3.1.1.min.js"></script>
@@ -126,16 +167,5 @@
             }
         }
     </script>
-	<script>
-		//点击某行，选中复选框
-		$('table tr').click(function(){
-			var input = $(this).find("input[type=checkbox]");
-			if(input.prop('checked')){
-				input.prop('checked',false);
-			}else{
-				input.prop('checked',true);
-			}
-		})
-	</script>
   </body>
 </html>
