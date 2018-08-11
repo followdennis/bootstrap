@@ -83,6 +83,22 @@
             
           </div>
       </div>
+      <div class="row">
+        <table border="1" class="check_two">
+          <tr item-id="2">
+            <td>1111<span>22</span></td>
+            <td>222</td>
+          </tr>
+          <tr item-id="2">
+            <td>1111---<span>333</span></td>
+            <td>222---<span>444</span></td>
+          </tr>
+          <tr item-id="3">
+            <td>1111<span>555</span></td>
+            <td>222<span>666</span></td>
+          </tr>
+        </table>
+      </div>
     </div>    
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="../js/jquery-3.1.1.min.js"></script>
@@ -94,7 +110,15 @@
           $(this).closest('span').addClass('check_active');
           $(this).closest('span').siblings('span').removeClass('check_active');
         }
-      
+
+      })
+    </script>
+    <script>
+      $(function(){
+        var text = $('.check_two tr[item-id="2"]').find('span').text();
+         var str = 'line_2';
+         var num = str.match(/\d+/);
+        
       })
     </script>
   </body>
