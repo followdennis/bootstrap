@@ -84,6 +84,7 @@
           </div>
       </div>
       <div class="row">
+<<<<<<< HEAD
         <table border="1" class="check_two">
           <tr item-id="2">
             <td>1111<span>22</span></td>
@@ -99,6 +100,68 @@
           </tr>
         </table>
       </div>
+=======
+        <table class="table table-bordered table-hover">
+          <tr>
+            <td><input type="checkbox" name="check[]" onclick="select_all(this)"> 全选</td>
+            <td>行行行行</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="check[]"></td>
+            <td>行行行行</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="check[]"></td>
+            <td>行行行行</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="check[]"></td>
+            <td>航航</td>
+          </tr>
+        </table>
+      
+      </div>
+
+
+
+    <div class="row align-items-start">
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+    <div class="row align-items-end">
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+      <div class="col">
+        One of three columns
+      </div>
+    </div>
+
+
+
+
+>>>>>>> 17ad1071c7b995775a96a08a0989e3d2958ae873
     </div>    
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="../js/jquery-3.1.1.min.js"></script>
@@ -120,6 +183,15 @@
          var num = str.match(/\d+/);
         
       })
+    </script>
+    <script>
+        function select_all(obj){
+            if($(obj).is(":checked") == true){
+              $("input[type='checkbox']").prop('checked',true);
+            }else{
+              $("input[type='checkbox']").prop('checked',false);
+            }
+        }
     </script>
   </body>
 </html>
