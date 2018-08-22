@@ -21,6 +21,28 @@
         <span class="zone">福建 南平 武夷山市</span>
         <button onclick="getLength()">判断</button>
       </div>
+      <div class="row">
+      <h1>复选框选中后的值</h1>
+      <p><input type="checkbox" name="default_type" ></p>
+      <button onclick="getVal()">获取值</button>
+      </div>
+      <div class="row">
+      <p>
+        <h1>class选择器，通过jquery选择的效果</h1>
+      </p>
+      <p>
+      <h4>div[class='aaa']会限制唯一 div.aaa 不限制唯一</h4>
+      </p>
+      <p class="ticket_address address_list">aaaaaaaddress</p>
+      <p>内容2222</p>
+      <ul class="ticket address">
+        <li>11111111</li>
+        <li>222222</li>
+         <li>3333333</li>
+      </ul>
+     
+      <button onclick="getTextByTitle2()">ul获取text</button>
+      </div>
     </div>    
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="../js/jquery-3.1.1.min.js"></script>
@@ -34,6 +56,20 @@
                 alert(arr.length + str);
 
           })
+      }
+      function getVal(){
+        var val = $("input[name='default_type']").is(":checked");
+        alert(val);
+      }
+
+      function getTextByTitle(){
+         var text = $(".ticket_address .address_list").text();
+         alert(text);
+      }
+
+       function getTextByTitle2(){
+         var text = $("ul.ticket").html();
+         alert(text);
       }
     </script>
   </body>
