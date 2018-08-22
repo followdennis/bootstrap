@@ -140,7 +140,11 @@
         One of three columns
       </div>
     </div>
-
+    <div style="width:1000px; height:200px;">
+      <input type="text" name="prefix" id="phone_prefix" > -
+      <input type="text" name="suffix" id="phone_suffix">
+      <input type="text" name="phone"  id="mobile">
+    </div>
 
 
 
@@ -156,6 +160,9 @@
           $(this).closest('span').siblings('span').removeClass('check_active');
         }
       
+      })
+      $("#phone_prefix").keyup(function(){
+            
       })
     </script>
     <script>

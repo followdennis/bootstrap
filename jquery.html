@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../js/bootstrap/dist/css/bootstrap.css">
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>jqery 处理字符串</h1>
+      <div class="row">
+        <span class="zone">河南 周口</span>
+        <span class="zone">福建 南平 武夷山市</span>
+        <button onclick="getLength()">判断</button>
+      </div>
+    </div>    
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/bootstrap4/dist/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      function getLength(){
+          $('.zone').each(function(i,item){
+                var str = $(this).text();
+                var arr = str.split(' ');
+                alert(arr.length + str);
+
+          })
+      }
+    </script>
+  </body>
+</html>
