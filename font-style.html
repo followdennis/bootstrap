@@ -9,7 +9,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../js/bootstrap4/dist/css/bootstrap.css">
     <style>
-
+    .control-line{
+      width:200px;
+      height:100px;
+      /*自动换行,适应于英文*/
+      word-wrap:break-word;
+      word-break:normal;
+    }
     </style>
   </head>
   <body>
@@ -55,6 +61,11 @@ Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis moll
             </dl>
           </dd>
         </dl>
+        <div class="row">
+          <div class="control-line">
+            自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行， 自动换行，aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          </div>
+        </div>
     </div>    
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="../js/jquery-3.1.1.min.js"></script>

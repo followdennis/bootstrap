@@ -34,6 +34,8 @@
       <h4>div[class='aaa']会限制唯一 div.aaa 不限制唯一</h4>
       </p>
       <p class="ticket_address address_list">aaaaaaaddress</p>
+      <p class='ticket_address'>bbb</p>
+      <button onclick="getTextByTitle()">内容</button>
       <p>内容2222</p>
       <ul class="ticket address">
         <li>11111111</li>
@@ -42,6 +44,18 @@
       </ul>
      
       <button onclick="getTextByTitle2()">ul获取text</button>
+      </div>
+      <div class="row">
+      <h3>下拉选择框，没选中，获取值测试</h3>
+      <select name='city' id="city">
+      <option value="7">南京</option>
+      <option value="2">扬州</option>
+      <option value="3">镇江</option>
+      <option value="4">无锡</option>
+      <option value="5">常州</option>
+      <option value="6">南通</option>
+      </select>
+      <button  onclick="getDefault()">获取select选中的内容</button>
       </div>
     </div>    
     <!-- jQuery first, then Bootstrap JS. -->
@@ -70,6 +84,15 @@
        function getTextByTitle2(){
          var text = $("ul.ticket").html();
          alert(text);
+      }
+
+      /**
+       * 获取select 的默认选中值
+       */
+      function getDefault(){
+        // var select = $("input[name='city']").val();
+        var select2 = $("#city").val();
+        alert(select2);
       }
     </script>
   </body>
