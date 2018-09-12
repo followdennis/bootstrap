@@ -6,19 +6,66 @@ body,*{
 	padding:0;
 	margin:0;
 }
-div.background
+div.outer
 {
-  width: 400px;
-  height: 266px;
+  width: 1000px;
+  height: 800px;
+  margin-left:100px;
+  margin-top:100px;
   border: 1px solid black;
 }
+.inner{
+	width:200px;
+	border:1px solid silver;
+	margin:5px;
+	/*float:left;*/
+}
+/*  absolute  */
+.inner1{
+	position:absolute;
+	left:100px;
+	top:200px;
+	background:silver;
+}
+/*  relative  */
+.inner2{
+	position:relative;
+	left:150px;
+	top:150px;
+	background:pink;
+}
+.inner3{
+	z-index:100;
+	position:static;
+	background:yellow;
+	
+}
+
 </style>
 </head>
-
 <body>
-
-<div class="background">
-	<div class="transbox">
+<div class="outer">
+	<div class="inner1 inner">
+		<h4>inner1 <font color="red">absolute</font></h4>
+		<p>
+		This is some text that is placed in the transparent box.
+		This is some text that is placed in the transparent box.
+		This is some text that is placed in the transparent box.
+		This is some text that is placed in the transparent box.
+		</p>
+	</div>
+	<div class="inner2 inner">
+		<h4>inner2 <font color="red">relative</font></h4>
+		<p>
+		This is some text that is placed in the transparent box.
+		This is some text that is placed in the transparent box.
+		This is some text that is placed in the transparent box.
+		This is some text that is placed in the transparent box.
+		This is some text that is placed in the transparent box.
+		</p>
+	</div>
+	<div class="inner3 inner">
+		<h4>inner3</h4>
 		<p>
 		This is some text that is placed in the transparent box.
 		This is some text that is placed in the transparent box.

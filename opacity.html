@@ -49,6 +49,83 @@ div.transbox p
 	filter: alpha(opacity=50);
 	*/
 }
+
+/*毛玻璃效果*/
+.glass-img{
+	width:300px;
+	margin:5px;
+	border:1px silver;
+	float:left;
+}
+.glass-img img{
+	width:300px;
+	overflow: hidden;
+}
+/*
+	毛玻璃核心代码
+ */
+.glass-right{
+	 filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(5px); /* Chrome, Opera */
+       -moz-filter: blur(5px);
+        -ms-filter: blur(5px);    
+            filter: blur(5px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false); /* IE6~IE9 */
+}
+
+/*气泡效果*/
+.bu{
+	position:absolute;
+	width:400px;
+	height:200px;
+	padding:20px;
+}
+.bubble{
+	position: relative;
+
+	width:150px;
+
+	height: 36px;
+
+	border:1px solid black;
+
+	border-radius:5px;
+
+	background: rgba(245,245,245,1)
+}
+
+.bubble:before,.bubble:after{
+	content: "";
+
+	display: block;
+
+	position: absolute;
+
+	top:8px;
+
+	width: 0;
+
+	height: 0;
+
+	border:6px solid transparent;
+}
+
+.bubble:before{
+	left:-11px;
+
+	border-right-color: rgba(245,245,245,1);
+
+	z-index:1
+}
+.bubble:after{
+	left:-12px;
+
+	border-right-color: rgba(0,0,0,1);
+
+	z-index: 0
+}
 </style>
 </head>
 
@@ -66,12 +143,24 @@ div.transbox p
 	</div>
 </div>
 <div>
-<h4>字体透明的继承问题</h4>
-<div class="background2">
-	<div class="font-capicaty">
-		文字文字文字文字文字文字
+	<h4>字体透明的继承问题</h4>
+	<div class="background2">
+		<div class="font-capicaty">
+			文字文字文字文字文字文字
+		</div>
 	</div>
 </div>
+<div class="glass">
+	<h4>毛玻璃效果</h4>
+	<div class="glass-img">
+		<img src="./images/violin.jpg">
+	</div>
+	<div class="glass-img glass-right">
+		<img src="./images/violin.jpg" alt="">		
+	</div>
+</div>
+<div class="bu">
+	<div class="bubble">bb</div>
 </div>
 </body>
 </html>
